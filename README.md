@@ -19,3 +19,28 @@ Create the entities and relationship shown in the diagram.
 
 The lab repository has the required dependencies defined in the `pom.xml` file.
 Create your entities in the `models` package.
+
+
+Shows 
+- Many Characters ( one to many ) mapped By Characters 
+* Network ( many to one), network_id
+* String: name, day, season, genre 
+
+Networks
+- Many Shows ( one to many ) mapped by Network 
+* String: call_letters
+* integer: channel 
+
+Actors 
+- Many Characters (one to many) mappedBy Actors 
+  * ArrayList of Characters 
+* (String) first_name, last_name
+* autogen ID, uuid 
+
+Characters
+- Actors ( many to one)
+  - * Actor_ID
+- Shows ( many to one )
+  - * Show_ID
+* autogen, UUID 
+* String: name, catchphrase
